@@ -17,7 +17,7 @@ export const CameraController = () => {
     const targetRot = new THREE.Euler(...target.rotation);
 
     // ÄNDERUNG: Abstand auf 30 erhöht (damit die große Folie reinpasst)
-    const dist = 3* (target.scale || 1);
+    const dist = 4* (target.scale || 1);
     
     const offset = new THREE.Vector3(0, 0, dist);
     offset.applyEuler(targetRot);
