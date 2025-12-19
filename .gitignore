@@ -14,7 +14,9 @@ dist-ssr
 .env.local
 .env.*.local
 .env.testing
-.env.production.local   
+.env.production.local 
+.env
+.DS_Store  
 #
 
 # Editor directories and files
