@@ -11,18 +11,17 @@ export const CameraController = () => {
 
   useEffect(() => {
     const target = slides[index];
-    // Wenn keine Slides da sind (z.B. beim ersten Start), nichts tun
     if (!target) return;
 
     const targetPos = new THREE.Vector3(...target.position);
     const targetRot = new THREE.Euler(...target.rotation);
 
-    // Abstand berechnen (Zoom basierend auf Scale)
-    const dist = 6 * (target.scale || 1);
+    // ÄNDERUNG: Abstand auf 30 erhöht (damit die große Folie reinpasst)
+    const dist = 3* (target.scale || 1);
+    
     const offset = new THREE.Vector3(0, 0, dist);
     offset.applyEuler(targetRot);
 
-    // Animation Position
     gsap.to(camera.position, {
       x: targetPos.x + offset.x,
       y: targetPos.y + offset.y,
@@ -31,7 +30,6 @@ export const CameraController = () => {
       ease: "power2.inOut"
     });
 
-    // Animation Rotation
     gsap.to(camera.rotation, {
       x: targetRot.x,
       y: targetRot.y,
