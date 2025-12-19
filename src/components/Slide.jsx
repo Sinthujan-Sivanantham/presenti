@@ -42,7 +42,7 @@ const Content = ({ slide }) => {
     );
   }
   return (
-    <Html transform occlude zIndexRange={[100, 0]} position={[0, 0, 0.06]} style={{ width: '380px', height: '230px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', pointerEvents: 'none', userSelect: 'none', fontFamily: 'sans-serif' }}>
+    <Html transform occlude zIndexRange={[100, 0]} position={[0, 0, 0.06]} style={{ width: '480px', height: '400px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center', pointerEvents: 'none', userSelect: 'none', fontFamily: 'sans-serif' }}>
       <h1 style={{ margin: 0, fontSize: '2.5em', color: '#222' }}>{slide.title}</h1>
       <p style={{ fontSize: '1.2em', color: '#444' }}>{slide.text}</p>
     </Html>
